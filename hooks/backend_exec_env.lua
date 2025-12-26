@@ -13,7 +13,7 @@ function PLUGIN:BackendExecEnv(ctx)
 
     local env_vars = {
         -- Add tool's bin directory to PATH
-        { key = "PATH", value = bin_path },
+        { key = "PATH", value = install_path },
     }
 
     -- Example: Tool-specific environment variables

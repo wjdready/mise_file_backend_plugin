@@ -10,13 +10,13 @@ PLUGIN = { -- luacheck: ignore
     version = "1.0.0",
 
     -- Required: Brief description of the backend and tools it manages
-    description = "A mise backend plugin for <BACKEND> tools",
+    description = "A mise backend plugin for file tools",
 
     -- Required: Plugin author/maintainer
     author = "<GITHUB_USER>",
 
     -- Optional: Plugin homepage/repository URL
-    homepage = "https://github.com/<GITHUB_USER>/<BACKEND>",
+    homepage = "https://github.com/wjdready/mise_file_backend_plugin",
 
     -- Optional: Plugin license
     license = "MIT",

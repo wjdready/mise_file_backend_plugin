@@ -8,29 +8,29 @@ function PLUGIN:BackendInstall(ctx)
     local install_path = ctx.install_path
 
     -- Validate inputs
-    if not tool or tool == "" then
-        error("Tool name cannot be empty")
-    end
-    if not version or version == "" then
-        error("Version cannot be empty")
-    end
-    if not install_path or install_path == "" then
-        error("Install path cannot be empty")
-    end
+    -- if not tool or tool == "" then
+    --     error("Tool name cannot be empty")
+    -- end
+    -- if not version or version == "" then
+    --     error("Version cannot be empty")
+    -- end
+    -- if not install_path or install_path == "" then
+    --     error("Install path cannot be empty")
+    -- end
 
-    -- Create installation directory
-    local cmd = require("cmd")
-    cmd.exec("mkdir -p " .. install_path)
+    -- -- Create installation directory
+    -- local cmd = require("cmd")
+    -- cmd.exec("mkdir -p " .. install_path)
 
-    -- Example implementations (choose/modify based on your backend):
+    -- -- Example implementations (choose/modify based on your backend):
 
-    -- Example 1: Package manager installation (like npm, pip)
-    local install_cmd = "<BACKEND> install " .. tool .. "@" .. version .. " --target " .. install_path
-    local result = cmd.exec(install_cmd)
+    -- -- Example 1: Package manager installation (like npm, pip)
+    -- local install_cmd = "<BACKEND> install " .. tool .. "@" .. version .. " --target " .. install_path
+    -- local result = cmd.exec(install_cmd)
 
-    if result:match("error") or result:match("failed") then
-        error("Failed to install " .. tool .. "@" .. version .. ": " .. result)
-    end
+    -- if result:match("error") or result:match("failed") then
+    --     error("Failed to install " .. tool .. "@" .. version .. ": " .. result)
+    -- end
 
     -- Example 2: Download and extract from URL
     --[[

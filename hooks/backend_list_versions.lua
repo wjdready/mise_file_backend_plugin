@@ -17,30 +17,33 @@ function PLUGIN:BackendListVersions(ctx)
     local json = require("json")
 
     -- Replace with your backend's API endpoint
-    local api_url = "https://api.<BACKEND>.org/packages/" .. tool .. "/versions"
+    -- local api_url = "https://api.<BACKEND>.org/packages/" .. tool .. "/versions"
 
-    local resp, err = http.get({
-        url = api_url,
-        -- headers = { ["Authorization"] = "Bearer " .. token } -- if needed
-    })
+    -- local resp, err = http.get({
+    --     url = api_url,
+    --     -- headers = { ["Authorization"] = "Bearer " .. token } -- if needed
+    -- })
 
-    if err then
-        error("Failed to fetch versions for " .. tool .. ": " .. err)
-    end
+    -- if err then
+    --     error("Failed to fetch versions for " .. tool .. ": " .. err)
+    -- end
 
-    if resp.status_code ~= 200 then
-        error("API returned status " .. resp.status_code .. " for " .. tool)
-    end
+    -- if resp.status_code ~= 200 then
+    --     error("API returned status " .. resp.status_code .. " for " .. tool)
+    -- end
 
-    local data = json.decode(resp.body)
-    local versions = {}
+    -- local data = json.decode(resp.body)
+    local versions = {
+        "latest",
+        "current"
+    }
 
     -- Parse versions from API response (adjust based on your API structure)
-    if data.versions then
-        for _, version in ipairs(data.versions) do
-            table.insert(versions, version)
-        end
-    end
+    -- if data.versions then
+    --     for _, version in ipairs(data.versions) do
+    --         table.insert(versions, version)
+    --     end
+    -- end
 
     -- Example 2: Command-line based version listing
     --[[
